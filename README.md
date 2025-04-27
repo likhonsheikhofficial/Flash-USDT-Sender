@@ -59,6 +59,7 @@ flash-usdt-sender/
 │   └── README.md           # Project documentation
 ├── next.config.mjs         # Next.js configuration
 └── tailwind.config.ts      # Tailwind CSS configuration
+
 \`\`\`
 
 ## SEO Features

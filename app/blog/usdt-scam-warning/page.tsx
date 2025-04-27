@@ -107,12 +107,19 @@ export default function BlogPost() {
         </Alert>
 
         <div className="relative w-full h-80 mb-8 rounded-lg overflow-hidden">
-          <Image
-            src="/blog-images/scam-warning.jpg"
-            alt="Cryptocurrency scam warning illustration"
-            fill
-            className="object-cover"
-          />
+          {/* Only render the image if the src exists */}
+          {"/blog-images/scam-warning.jpg" ? (
+            <Image
+              src="/blog-images/scam-warning.jpg"
+              alt="Cryptocurrency scam warning illustration"
+              fill
+              className="object-cover"
+            />
+          ) : (
+            <div className="bg-red-50 flex items-center justify-center h-full">
+              <AlertTriangle className="h-16 w-16 text-red-400" />
+            </div>
+          )}
         </div>
 
         <div className="prose max-w-none">
